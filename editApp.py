@@ -3,40 +3,7 @@ from tkinter.filedialog import askopenfilename, asksaveasfilename
 
 window = Tk()
 
-'''
-for i in range(3):
-    window.columnconfigure(i, weight=1, minsize=75)
-    window.rowconfigure(i, weight=1, minsize=50)
-    for j in range(0, 3):
-        frame = Frame(master=window, relief=RAISED, borderwidth=1)
-        frame.grid(row=i, column=j, padx=1, pady=1)
-        label = Label(master=frame,text = f'Row{i}\nColumn {j}')
-        label.pack(padx=10,pady=10)
-
-text = Text(width=50, height=7)
-text.insert(1.0, 'Hello')
-text.insert(2.0, '\nHello')
-text.insert(3.0, '\nHello')
-text.delete(1.0, 1.2)
-print(text.get(2.0, 2.2))
-text.pack(side=LEFT)
-fname = askopenfilename(title = 'Select', filetypes = [('Текстовыйе файлы', '*.txt'),('All files', '*.*')])
-
-print(fname)
-
-
-def change(event):
-    b['fg'] = 'red'
-    b['activeforeground'] = 'red'
-
-
-b = Button(text='RED', width=10, height=3)
-b.bind('<Button-1>', change)
-b.bind('<Return>', change)
-b.pack()
-'''
 window.title('Редактор')
-window.iconbitmap('Images/cat30.ico')
 window.rowconfigure(0, minsize=700, weight=1)
 window.columnconfigure(1, minsize=700, weight=1)
 
